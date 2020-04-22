@@ -18,14 +18,14 @@ const botName = 'Chattor Bot';
 io.on('connection', socket => {
 
     // welcome current user
-    socket.emit('message', formatMessage(botName, 'Welcome to my chatapp!'));
+    socket.emit('message', formatMessage(botName, 'Hello and welcome to my chat application, here you can chat. Hehe'));
 
     // broadcast when a user connects
-    socket.broadcast.emit('message', formatMessage(botName, 'A user has joined a chat.'));
+    socket.broadcast.emit('message', formatMessage(botName, '[Bot]: A user has joined a chat.'));
 
     // run when client disconnects
     socket.on('disconnect', () => {
-        io.emit('message', formatMessage(botName, 'A user has left the chat.'));
+        io.emit('message', formatMessage(botName, '[Bot]: A user has left the chat.'));
     });
 
     // listen for chatMessage
