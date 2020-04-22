@@ -1,0 +1,19 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "Fullstack chat app using JavaScript, Express, Socket.io",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcustovic/chat-app.git"
+  },
+  "author": "Dominik Čustović",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcustovic/chat-app/issues"
+  },
+  "homepage": "https://github.com/dcustovic/chat-app#readme"
+}
