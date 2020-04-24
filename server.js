@@ -27,7 +27,7 @@ io.on('connection', socket => {
             socket.emit('message', formatMessage(botName, 'Hello and welcome to my chat application, here you can chat. Hehe'));
 
             // broadcast when a user connects
-            socket.broadcast.to(user.room).emit('message', formatMessage(botName, `<strong>${user.username}</strong> has joined a chat.`));
+            socket.broadcast.to(user.room).emit('message', formatMessage(botName, `${user.username} has joined the party.`));
     
             // send users and room info
             io.to(user.room).emit('roomUsers', {
@@ -50,7 +50,7 @@ io.on('connection', socket => {
         const user = userLeave(socket.id);
 
         if (user) {
-            io.to(user.room).emit('message', formatMessage(botName, `<strong>${user.username}</strong> has left the chat.`));
+            io.to(user.room).emit('message', formatMessage(botName, `${user.username} has left the party.`));
         
             // send users and room info
             io.to(user.room).emit('roomUsers', {
