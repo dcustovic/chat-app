@@ -13,7 +13,7 @@ const io = socketio(server);
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-const botName = 'Chattor Bot';
+const botName = 'Chat Bot';
 
 // run when client connects
 io.on('connection', socket => {
