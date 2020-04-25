@@ -9,7 +9,7 @@
 
 body {
 	font-family: 'Poppins', sans-serif;
-	background-image: linear-gradient(180deg, rgba(212, 152, 252, 0.911), rgb(75, 34, 116));
+	background-image: linear-gradient(50deg, rgba(133, 41, 194, 0.932), rgba(66, 14, 117, 0.082));
 	min-height: 100vh;
 	overflow: auto;
 }
@@ -24,13 +24,13 @@ a {
 
 .btn {
 	cursor: pointer;
-	padding: 5px 15px;
 	border: 0;
-	font-size: 17px;
-	display: flex;
 	border-radius: 6px;
 	border: none;
-
+	display: block;
+}
+.btn-danger {
+	border-radius: 50px;
 }
 
 input[type=text]{
@@ -82,10 +82,9 @@ input[type=text]{
 
 /* Chat Page */
 .chat-container {
-	/*max-width: 600px;*/
 	margin: 80px auto;
 	overflow: hidden;
-	background: rgba(185, 76, 212, 0.1);
+	background: rgba(135, 101, 230, 0.5);
 	box-shadow: 6px 5px 18px 2px #0e0e0e65;
 	border: none;
 	border-top-left-radius: 7px;
@@ -94,6 +93,7 @@ input[type=text]{
 	border-bottom-right-radius: 7px;
 
 }
+
 /*
 .chat-header {
 	background: #667aff;
@@ -144,12 +144,14 @@ input[type=text]{
 }
 
 .chat-sidebar ul li {
-	padding: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
 }
 
 /* message */
 .chat-messages {
-	color: white;
+	color: rgba(255, 255, 255, 0.899);
 	padding: 15px;
 	height: 500px;
 	overflow: auto;
@@ -160,7 +162,7 @@ input[type=text]{
 	padding: 1px 15px 1px 15px;
 	margin-bottom: 15px;
 	border-radius: 5px;
-	background-color: #1c06252a;
+	background-color: #361b5838;
 	
 }
 
@@ -170,11 +172,13 @@ input[type=text]{
 	color: white;
 	margin-bottom: 7px;
 	margin-top: 7px;
+
 }
 
 /* for Time */
-.chat-messages .message .meta span {
-	color: rgba(0, 0, 0, 0.856);
+span {
+	color: rgba(0, 0, 0, 0.715);
+
 }
 
 /* bottom Enter Message */
@@ -195,7 +199,7 @@ input[type=text]{
 	
 }
 
-@media (max-width: 575px) {
+@media (max-width: 600px) {
 	.chat-main {
 		display: block;
 	}
@@ -204,3 +208,4 @@ input[type=text]{
 		display: block;
 	}
 }
+
