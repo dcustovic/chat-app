@@ -1,4 +1,6 @@
+/* reference font 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+*/
 
 
 * {
@@ -16,6 +18,20 @@ body {
 
 ul {
 	list-style: none;
+
+}
+ul li::before {
+	content: "\2022";
+	color: rgb(43, 255, 0);
+	display: inline-block; 
+	width: 0.7em;
+	margin-left: -0.1em;
+	font-size: 180%;
+	line-height: 0.5;
+}
+
+hr {
+	border: 1px solid rgba(173, 120, 204, 0.356);
 }
 
 a {
@@ -38,7 +54,10 @@ input[type=text]{
 	-moz-border-radius: 15px;
 	border-radius: 6px;
 	border: none;
-	}
+}
+
+
+
 
 
 /* Join Page */
@@ -83,8 +102,8 @@ input[type=text]{
 /* Chat Page */
 .chat-container {
 	margin: 80px auto;
-	overflow: hidden;
-	background: rgba(135, 101, 230, 0.5);
+	overflow: auto;
+	background-image: linear-gradient(70deg, rgba(50, 8, 78, 0.521), rgba(66, 14, 117, 0));
 	box-shadow: 6px 5px 18px 2px #0e0e0e65;
 	border: none;
 	border-top-left-radius: 7px;
@@ -113,7 +132,7 @@ input[type=text]{
 }
 
 .chat-sidebar {
-	background: #2a0d6196;
+	background-image: linear-gradient(70deg, rgba(30, 9, 44, 0.863), rgba(66, 14, 117, 0.568));
 	color: #fff;
 	padding: 20px 20px 60px;
 	overflow-y: auto;
@@ -123,7 +142,7 @@ input[type=text]{
 }
 
 .chat-sidebar h2 {
-	font-size: 17px;
+	font-size: 16px;
 	padding: 10px;
 	margin-bottom: 20px;
 }
@@ -131,7 +150,7 @@ input[type=text]{
 .chat-sidebar h3 {
 	font-size: 18px;
 	padding: 10px;
-	background: rgba(60, 11, 83, 0.747);
+	background: rgba(255, 255, 255, 0.11);
 	margin-bottom: 20px;
 	border-bottom-left-radius: 6px;
 	border-bottom-right-radius: 6px;
@@ -154,7 +173,7 @@ input[type=text]{
 	color: rgba(255, 255, 255, 0.899);
 	padding: 15px;
 	height: 500px;
-	overflow: auto;
+	overflow-y: auto;
 }
 
 /* message balon */
@@ -162,7 +181,7 @@ input[type=text]{
 	padding: 1px 15px 1px 15px;
 	margin-bottom: 15px;
 	border-radius: 5px;
-	background-color: #361b5838;
+	background-color: rgba(48, 13, 77, 0.200);
 	
 }
 
