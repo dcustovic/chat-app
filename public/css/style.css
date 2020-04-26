@@ -24,10 +24,18 @@ ul li::before {
 	content: "\2022";
 	color: rgb(43, 255, 0);
 	display: inline-block; 
-	width: 0.7em;
+	margin-right: 0.45em;
 	margin-left: -0.1em;
 	font-size: 180%;
 	line-height: 0.5;
+    -webkit-animation: pulse 4s;
+    -webkit-animation-iteration-count: infinite; 
+}
+
+@-webkit-keyframes pulse {
+	60% {-webkit-transform: scale(1.2, 1.2); opacity: 1.0}
+	60% {-webkit-transform: scale(1.2, 1.2); opacity: 0.05;}
+
 }
 
 hr {
@@ -171,6 +179,7 @@ input[type=text]{
 /* message */
 .chat-messages {
 	color: rgba(255, 255, 255, 0.899);
+	font-size: 15px;
 	padding: 15px;
 	height: 500px;
 	overflow-y: auto;
@@ -182,13 +191,12 @@ input[type=text]{
 	margin-bottom: 15px;
 	border-radius: 5px;
 	background-color: rgba(48, 13, 77, 0.200);
-	
 }
 
 /* for Chat Bot */
 .chat-messages .message .meta {
-	font-size: 15px;
-	color: white;
+	color: rgba(31, 255, 31, 0.733);
+	font-size: 16px;
 	margin-bottom: 7px;
 	margin-top: 7px;
 
@@ -196,7 +204,7 @@ input[type=text]{
 
 /* for Time */
 span {
-	color: rgba(0, 0, 0, 0.715);
+	color: rgba(0, 0, 0, 0.555);
 
 }
 
