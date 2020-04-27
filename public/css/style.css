@@ -28,14 +28,14 @@ ul li::before {
 	margin-left: -0.1em;
 	font-size: 180%;
 	line-height: 0.5;
+	
     -webkit-animation: pulse 4s;
     -webkit-animation-iteration-count: infinite; 
 }
 
 @-webkit-keyframes pulse {
 	60% {-webkit-transform: scale(1.2, 1.2); opacity: 2.0}
-	60% {-webkit-transform: scale(1.2, 1.2); opacity: 0.23;}
-
+	60% {-webkit-transform: scale(1.2, 1.2); opacity: 0.25;}
 }
 
 hr {
@@ -178,7 +178,7 @@ input[type=text]{
 
 /* message */
 .chat-messages {
-	color: rgba(255, 255, 255, 0.899);
+	color: rgba(255, 255, 255, 0.966);
 	font-size: 15px;
 	padding: 15px;
 	height: 500px;
@@ -195,7 +195,7 @@ input[type=text]{
 
 /* for Chat Bot */
 .chat-messages .message .meta {
-	color: rgba(31, 255, 31, 0.733);
+	color: rgba(31, 255, 31, 0.801);
 	font-size: 16px;
 	margin-bottom: 7px;
 	margin-top: 7px;
