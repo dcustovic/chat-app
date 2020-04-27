@@ -1,2 +1,2 @@
 # chat-app
-Fullstack chat app using JavaScript, Express, Socket.io
+Chat app using Vanilla JS, Express, Socket.io

@@ -10,9 +10,6 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 
-app.get(/.*/, function(req, res) {
-	res.sendFile(__dirname + '/dist/index.html');
-});
 // setting static folder
 app.use(express.static(path.join(__dirname, 'dist')));
 

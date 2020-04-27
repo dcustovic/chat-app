@@ -1,7 +1,8 @@
 // webpack v4
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -22,19 +23,13 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract(
-          {
-            fallback: 'style-loader',
-            use: [
-                { loader: 'css-loader', options: { minimize: true } } 
-            ]
-          })
+        use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin({
-      filename: 'custom.css',
+    new MiniCssExtractPlugin({
+        filename: 'style.css',
     }),
     new HtmlWebpackPlugin({
         inject: false,
