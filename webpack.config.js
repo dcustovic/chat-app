@@ -10,7 +10,7 @@ module.exports = {
   entry: { main: './public/js/main.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'main.js',
     publicPath: '/dist'
   },
   target: 'node',
@@ -31,7 +31,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-        filename: 'custom.css',
+        filename: 'style.css',
     }),
     new HtmlWebpackPlugin({
         inject: false,
