@@ -1,5 +1,5 @@
 # chat-app
-How to use:
+Chat app using Vanilla JS, Express, Socket.io
 
 # Setup
 You must have Node.js installed.
