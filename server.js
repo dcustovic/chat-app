@@ -11,7 +11,7 @@ const io = socketio(server);
 
 
 // setting static folder
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 const botName = 'Chat Bot';
@@ -28,7 +28,7 @@ io.on('connection', socket => {
             socket.emit('message', formatMessage(botName, 'Welcome to my first chat app. Enjoy your chat :)'));
 
             // broadcast when a user connects
-            socket.broadcast.to(user.room).emit('message', formatMessage(botName, `${user.username} has joined the party.`));
+            socket.broadcast.to(user.room).emit('message', formatMessage(botName, `<b>${user.username}</b> has joined the party.`));
     
             // send users and room info
             io.to(user.room).emit('roomUsers', {
@@ -51,7 +51,7 @@ io.on('connection', socket => {
         const user = userLeave(socket.id);
 
         if (user) {
-            io.to(user.room).emit('message', formatMessage(botName, `${user.username} has left the party.`));
+            io.to(user.room).emit('message', formatMessage(botName, `<b>${user.username}</b> has left the party.`));
         
             // send users and room info
             io.to(user.room).emit('roomUsers', {

@@ -3,13 +3,15 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const LinkTypePlugin = require('html-webpack-link-type-plugin').HtmlWebpackLinkTypePlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: { main: './public/js/main.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    filename: 'bundle.js',
+    publicPath: '/dist'
   },
   target: 'node',
   externals: [nodeExternals()], 
@@ -29,7 +31,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-        filename: 'style.css',
+        filename: 'custom.css',
     }),
     new HtmlWebpackPlugin({
         inject: false,
@@ -46,5 +48,8 @@ module.exports = {
         template: './public/leave.html',
         filename: 'leave.html'
     }),
+    new LinkTypePlugin({
+      '**/*.css' : 'text/css'
+    })
   ]
 };

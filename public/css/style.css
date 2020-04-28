@@ -7,6 +7,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	
 }
 
 body {
@@ -191,11 +192,12 @@ input[type=text]{
 	margin-bottom: 15px;
 	border-radius: 5px;
 	background-color: rgba(48, 13, 77, 0.200);
+	word-break: break-all;
 }
 
 /* for Chat Bot */
 .chat-messages .message .meta {
-	color: rgba(31, 255, 31, 0.801);
+	color: rgba(0, 255, 0, 0.849);
 	font-size: 16px;
 	margin-bottom: 7px;
 	margin-top: 7px;

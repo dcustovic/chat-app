@@ -1,2 +1,6 @@
 # chat-app
-Chat app using Vanilla JS, Express, Socket.io
+How to use:
+
+cd chat-app
+npm install
+npm run start
