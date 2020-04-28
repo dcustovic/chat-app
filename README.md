@@ -1,6 +1,11 @@
 # chat-app
 How to use:
 
-cd chat-app
-npm install
-npm run start
+# Setup
+You must have Node.js installed.
+
+• cd chat-app
+
+• npm install
+
+• npm start
