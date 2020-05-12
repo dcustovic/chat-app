@@ -1,7 +1,7 @@
 # chat-app
 Chat app using JavaScript, Express, Socket.io & Bootstrap
 
-# Setup
+# How to use
 You must have Node.js installed.
 
 • cd chat-app
